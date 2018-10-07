@@ -1,0 +1,203 @@
+body{
+    margin: 0;
+    font-family: "Inconsolata";
+}
+
+
+#space{
+    width: 100%;
+    height: 100vh;
+    background-color: #000033;
+    perspective: 100px;
+    overflow-x:hidden;
+    overflow-y:auto;
+}
+
+.cometa{
+    position: absolute;
+    background: linear-gradient(to top, rgba(204,204,255,0.65) 0%,rgba(0,0,0,0) 100%);
+    width: 2px;
+    border-radius: 2px;
+    top: 0px;
+}
+
+.c1{
+    right: 60vh;
+    transform: rotate(45deg);
+    animation: cometa1 4s linear infinite;
+}
+
+.c2{
+    transform: rotate(45deg);
+    animation: cometa2 3s linear infinite;
+}
+
+.c3{
+    transform: rotate(-45deg);
+    animation: cometa3 5s linear infinite;
+}
+
+.c4{
+    transform: rotate(-45deg);
+    animation: cometa4 2s linear infinite;
+}
+
+.c5{
+    transform: rotate(-45deg);
+    animation: cometa5 6s linear infinite;
+}
+
+.c6{
+    transform: rotate(45deg);
+    animation: cometa6 6s linear infinite;
+}
+
+#myPhoto{
+    margin: 50px auto;
+    height: 300px;
+    width: 300px;
+    background-image: url(../img/logo.jpg);
+    background-size: cover;
+    background-position-x: 110%;
+    border: 2px solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+#myPhoto:hover{
+    transform: scale(1.02);
+}
+
+.layer{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    position: absolute;
+    background-position: center bottom;
+    background-repeat: repeat-x;
+    background-size: auto 100vh;
+}
+#img_Matheus_R{
+    height: 300px;
+}
+#layer1{background-image: url(../img/stars1.png);transform: translateZ(-400px) scale(5);}
+#layer2{background-image: url(../img/stars2.png);transform: translateZ(-350px) scale(4.5);}
+#layer3{background-image: url(../img/stars3.png);transform: translateZ(-300px) scale(4);}
+#layer4{background-image: url(../img/stars4.png);transform: translateZ(-250px) scale(3.5);}
+#layer5{background-image: url(../img/stars5.png);transform: translateZ(-200px) scale(3);}
+#layer6{background-image: url(../img/stars6.png);transform: translateZ(-150px) scale(2.5);}
+#layer7{background-image: url(../img/stars7.png);transform: translateZ(-100px) scale(2);}
+#layer8{background-image: url(../img/stars8.png);transform: translateZ(-50px) scale(1.5);}
+#layer9{background-image: url(../img/stars9.png);transform: translateZ(0px) scale(1);}
+
+@-webkit-keyframes cometa1{
+    0%, 69%{}
+    70%{
+        height: 0;right: 0;
+    }
+    91%{
+        top: 0;right: 50vh;height: 100vh;
+    }
+    100%{
+        top: 100vh;right: 100vh;height: 0px;
+    }
+}
+
+@-webkit-keyframes cometa2{
+    0%, 69%{}
+    70%{
+        height: 0;right: 25vh;
+    }
+    91%{
+        top: 0;right: 75vh;height: 100vh;
+    }
+    100%{
+        top: 100vh;right: 125vh;height: 0px;
+    }
+}
+
+@-webkit-keyframes cometa3{
+    0%, 69%{}
+    70%{
+        height: 0;left: 25vh;
+    }
+    91%{
+        top: 0;left: 75vh;height: 100vh;
+    }
+    100%{
+        top: 100vh;left: 125vh;height: 0px;
+    }
+}
+
+@-webkit-keyframes cometa4{
+    0%, 69%{}
+    70%{
+        height: 0;left: 47vh;
+    }
+    91%{
+        top: 0;left: 97vh;height: 100vh;
+    }
+    100%{
+        top: 100vh;left: 147vh;height: 0px;
+    }
+}
+
+@-webkit-keyframes cometa5{
+    0%, 69%{}
+    70%{
+        height: 0;left: -25vh;
+    }
+    91%{
+        top: 0;left: 25vh;height: 100vh;
+    }
+    100%{
+        top: 100vh;left: 75vh;height: 0px;
+    }
+}
+
+@-webkit-keyframes cometa6{
+    0%, 69%{}
+    70%{
+        height: 0;right: 7vh;
+    }
+    91%{
+        top: 0;right: 57vh;height: 100vh;
+    }
+    100%{
+        top: 100vh;right: 107vh;height: 0px;
+    }
+}
+
+#header{
+    height: 60px;
+    width: 100%;
+    display: table;
+    position: absolute;
+    top: 0;
+    transition: all 1s ease;
+}
+
+.header-fixed{
+    background-color: #000033;
+    background-image: url(../img/stars-bar.png);
+    background-position: center bottom;
+    background-size: 100%;
+    border: 2px solid black;
+}
+
+#table-header{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#table-header td{
+    text-align: center;
+    width: 25%;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}

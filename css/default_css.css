@@ -1,0 +1,60 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06/10/2018, 16:23:14
+    Author     : Matheus
+*/
+
+body{
+    margin: 0;
+    font-family: "Inconsolata";
+}
+
+#header{
+    height: 60px;
+    width: 100%;
+    background-color: #000033;
+    display: table;
+    position: fixed;
+    top: 0;
+    z-index: 50;
+    transition: all 1s ease;
+}
+
+main{
+    margin-top: 60px;
+    width: 100%;
+    height: calc(100vh - 60px);
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#table-header{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    height: 100%;
+}
+
+#table-header td{
+    text-align: center;
+    width: 25%;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.custom-input-text{
+    padding: 2px 15px;
+    border: darkgray solid 1px;
+    border-radius: 5px;
+}
+
+#imgPreview{
+    margin: 10px 0;
+    width: 300px;
+}

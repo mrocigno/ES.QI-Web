@@ -1,0 +1,15 @@
+/*fundo*/
+::-webkit-scrollbar-track {
+    background-color: rgba(0,0,0,0);
+}
+
+/*fundo*/
+::-webkit-scrollbar {
+    width: 5px;
+    background: rgba(0,0,0,0);
+}
+
+/*Mexer na barra que vai de cima pra baixo*/
+::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.3);
+}
