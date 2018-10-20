@@ -47,7 +47,7 @@ class db {
         }
     }
     
-    public function select($table, $arrayCampos, $arrayWhere = null, $arrayLimit = null){
+    public function select($table, $arrayCampos, $arrayWhere = null, $arrayLimit = null, $order_by = null){
         if(!isset($this->con)){
             $this->connect();
         }
@@ -73,8 +73,12 @@ class db {
                 $limit = " LIMIT " . (($arrayLimit["limit"] * $arrayLimit["page"]) - $arrayLimit["limit"]) . ", " . $arrayLimit["limit"];
             }
         }
+        
+        if(isset($order_by) && $order_by != null){
+            $order_by = " ORDER BY $order_by";
+        }
 
-        $sql = "SELECT $campos FROM $table$where$limit";
+        $sql = "SELECT $campos FROM $table$where$limit$order_by";
 
         $result = mysqli_query($this->con, $sql);
         

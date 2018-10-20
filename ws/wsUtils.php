@@ -17,7 +17,7 @@ class wsUtils {
         echo json_encode(array(
             "status" => $status,
             "result" => $result,
-            "data" => $data
+            "data" => ($data == null? (object) $data: $data)
         ));
     }
 }
